@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 6</h1>
+	<p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+	</p>
+</body>
+<script>
+	let pricechips = parseFloat(prompt('Ціна чипсів', '0'))
+let totalchips = parseInt(prompt('Кількість упаковок', '0'))
+
+let pricemush = parseFloat(prompt('Ціна каші', '0'))
+let totalmush = parseInt(prompt('Кількість упаковок', '0'))
+
+let pricwater = parseFloat(prompt('Ціна води', '0'))
+let totalwater = parseInt(prompt('Кількість упаковок', '0'))
+
+let scorechips = pricechips * totalchips
+let scoremush = pricemush * totalmush
+let scorewater = pricwater * totalwater
+let totalscore = scorechips + scoremush + scorewater
+
+document.write(`
+	<table border = "1px">
+	<tr>
+	<th>Товар</th>
+	<th>Загальна вартість</th>
+	</tr>
+	<tr>
+	<td>Чипси</td>
+	<td>${scorechips} грн</td>
+	</tr>
+	<tr>
+	<td>Каша</td>
+	<td>${scoremush} грн</td>
+	</tr>
+	<tr>
+	<td>Вода</td>
+	<td>${scorewater} грн</td>
+	</tr>
+	<tr>
+	<th>Загальна вартість ${totalscore}</th>
+	</tr>
+	</table>
+`)
+</script>
+</html>
